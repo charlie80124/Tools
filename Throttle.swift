@@ -8,7 +8,7 @@ import Foundation
 import UIKit
 
 class Throttler {
-    private let queue: DispatchQueue = DispatchQueue.global(qos: .background)
+    private let queue: DispatchQueue = DispatchQueue.global(qos: .default)
     private var job: DispatchWorkItem = DispatchWorkItem(block: {})
     private var previousRun: TimeInterval = 0
     private var maxInterval: TimeInterval
