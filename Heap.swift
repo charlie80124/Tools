@@ -14,7 +14,7 @@ struct Heap<T> {
     
     mutating func buildHeap() {
         for i in stride(from: count/2-1, through: 0, by: -1) {
-            swiftDown(elementAtIndex: i)
+            siftDown(elementAtIndex: i)
         }
     }
     
