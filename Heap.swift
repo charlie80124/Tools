@@ -29,13 +29,13 @@ struct Heap<T> {
         return priority(elements[firstIndex], elements[secondIndex])
     }
     
-    func highestPriortyIndex(of paranetIndex:Int, and childIndex:Int) -> Int {
+    func higherPriortyIndex(of paranetIndex:Int, and childIndex:Int) -> Int {
         guard childIndex < count && isHigherPriority(at: childIndex, then: paranetIndex) else { return paranetIndex }
         return childIndex
     }
     
     func highestPriorityIndex(for parent:Int) -> Int {
-        return highestPriortyIndex(of: highestPriortyIndex(of: parent, and: leftChildIndex(of: parent)), and: rightChildIndex(of: parent))
+        return higherPriortyIndex(of: higherPriortyIndex(of: parent, and: leftChildIndex(of: parent)), and: rightChildIndex(of: parent))
     }
     
     mutating func swapElement(at firstIndex:Int, with secondIndex:Int) {
