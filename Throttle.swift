@@ -28,9 +28,3 @@ class Throttler {
     }
     
 }
-var t = Throttler(seconds: 1)
-for _ in 0...10 {
-    t.throttle {
-        print(10)
-    }
-}
