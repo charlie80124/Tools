@@ -71,6 +71,6 @@ struct Heap<T> {
         let childIndex = highestPriorityIndex(for: index)
         if index == childIndex { return }
         swapElement(at: index, with: childIndex)
-        swiftDown(elementAtIndex: childIndex)
+        siftDown(elementAtIndex: childIndex)
     }
 }
